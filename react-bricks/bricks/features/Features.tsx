@@ -40,7 +40,7 @@ Features.schema = {
     colsNumber: "2",
     features: [
       {
-        title: "The best experience for editors",
+        title: "",
         text: "Your marketing team hates gray forms. Give them the easiest UX.",
         withIcon: true,
         withLink: false,

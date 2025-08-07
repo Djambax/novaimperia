@@ -115,8 +115,8 @@ FeatureItem.schema = {
     'https://github.com/ReactBricks/react-bricks-ui/blob/master/src/website/Features/FeatureItem.tsx',
 
   getDefaultProps: () => ({
-    title: 'The best experience for editors',
-    text: 'Your marketing team hates gray forms. Give them the easiest UX.',
+    title: '',
+    text: '',
     withIcon: true,
     withLink: false,
     image: icons.PHOTO_STACK,

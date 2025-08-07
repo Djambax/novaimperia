@@ -144,7 +144,7 @@ Header.schema = {
           {
             linkText: 'Visual editing',
             linkDescription:
-              'The best visual experience for your content editors',
+              '',
             linkPath: '/',
           },
         ],
