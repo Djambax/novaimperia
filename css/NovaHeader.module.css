@@ -1,0 +1,329 @@
+/* NOVA IMPÉRIA Header Styles */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+  transition: var(--transition-normal);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  height: 80px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--space-8);
+  }
+}
+
+/* === LOGO === */
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.logoLink:hover {
+  transform: scale(1.02);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.logoImage {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* === DESKTOP NAVIGATION === */
+.desktopNav {
+  display: none;
+  flex: 1;
+  justify-content: center;
+  margin: 0 var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  position: relative;
+}
+
+.menuItemContent {
+  position: relative;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-medium);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.menuLink:hover {
+  background-color: var(--color-hover);
+  color: var(--color-text-primary);
+}
+
+.dropdownIcon {
+  transition: var(--transition-fast);
+}
+
+.menuItemContent:hover .dropdownIcon {
+  transform: rotate(180deg);
+}
+
+/* === DROPDOWN === */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.dropdownContent a {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+}
+
+.dropdownContent a:hover {
+  background-color: var(--color-hover);
+  color: var(--color-text-primary);
+}
+
+/* === CTA BUTTON === */
+.ctaContainer {
+  display: none;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .ctaContainer {
+    display: flex;
+  }
+}
+
+.ctaButton {
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-4);
+  white-space: nowrap;
+}
+
+/* === MOBILE MENU BUTTON === */
+.mobileMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+@media (min-width: 1024px) {
+  .mobileMenuButton {
+    display: none;
+  }
+}
+
+.mobileMenuButton:hover {
+  background-color: var(--color-hover);
+}
+
+.mobileMenuButton.active {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* === MOBILE MENU === */
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+.mobileMenuContent {
+  padding: var(--space-4);
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobileMenuItem {
+  width: 100%;
+}
+
+.mobileMenuItem .menuLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-lg);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-gray-100);
+}
+
+.mobileMenuItem .menuLink:hover {
+  background-color: var(--color-gray-200);
+}
+
+.mobileDropdown {
+  position: static;
+  margin-top: var(--space-2);
+  margin-left: var(--space-4);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+}
+
+.mobileCtaContainer {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.mobileCtaButton {
+  width: 100%;
+  justify-content: center;
+}
+
+/* === DARK MODE === */
+[data-theme="dark"] .header {
+  border-bottom-color: var(--color-gray-700);
+}
+
+[data-theme="dark"] .dropdown {
+  background-color: var(--color-gray-800);
+  border-color: var(--color-gray-700);
+}
+
+[data-theme="dark"] .mobileMenuItem .menuLink {
+  background-color: var(--color-gray-800);
+}
+
+[data-theme="dark"] .mobileMenuItem .menuLink:hover {
+  background-color: var(--color-gray-700);
+}
+
+[data-theme="dark"] .mobileDropdown {
+  background-color: var(--color-gray-800);
+  border-color: var(--color-gray-700);
+}
+
+/* === ANIMATIONS === */
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .logoLink,
+  .menuLink,
+  .mobileMenuButton,
+  .dropdownIcon {
+    transition: none;
+  }
+}
+
+/* === ACCESSIBILITY === */
+.menuLink:focus,
+.mobileMenuButton:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* === STICKY HEADER EFFECT === */
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .header.scrolled {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 767px) {
+  .container {
+    height: 70px;
+    padding: 0 var(--space-4);
+  }
+  
+  .logoImage {
+    height: 40px;
+  }
+}
