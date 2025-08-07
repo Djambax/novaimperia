@@ -6,16 +6,13 @@ import pageTypes from "./pageTypes"
 import NextLink from "./NextLink"
 
 const config: types.ReactBricksConfig = {
-  appId: process.env.NEXT_PUBLIC_APP_ID,
-  apiKey: process.env.API_KEY,
-  environment: process.env.NEXT_PUBLIC_ENVIRONMENT,
+  appId: process.env.NEXT_PUBLIC_APP_ID || "nova-imperia-dev",
+  apiKey: process.env.API_KEY || "dev-key",
+  environment: process.env.NEXT_PUBLIC_ENVIRONMENT || "development",
   bricks,
   pageTypes,
   customFields: [],
-  logo: "/logo.svg",
-  loginUI: {},
-  contentClassName: "",
-  //defaultTheme: "",
+  logo: "/nova-imperia-logo.svg",
   renderLocalLink: NextLink,
   navigate: (path: string) => Router.push(path),
   loginPath: "/admin",
@@ -23,22 +20,18 @@ const config: types.ReactBricksConfig = {
   playgroundPath: "/admin/playground",
   appSettingsPath: "/admin/app-settings",
   previewPath: "/preview",
-  //getAdminMenu: () => [],
   isDarkColorMode: false,
   toggleColorMode: () => {},
   useCssInJs: false,
   appRootElement: "#__next",
   clickToEditSide: types.ClickToEditSide.BottomRight,
-  //responsiveBreakpoints: [{ type: types.DeviceType.Phone, width: 480, label: "Smartphone" },],
   enableAutoSave: true,
   disableSaveIfInvalidProps: false,
   enablePreview: true,
   blockIconsPosition: types.BlockIconsPosition.OutsideBlock,
-  enableUnsplash: true,
-  unsplashApiKey: "",
+  enableUnsplash: false,
   enablePreviewImage: true,
   enableDefaultEmbedBrick: true,
-  //permissions,  Fine-grained permissions for enterprise plans
 }
 
 export default config

@@ -1,0 +1,22 @@
+/* NOVA IMPÉRIA - CSS Simple pour Test */
+
+:root {
+  --color-primary: #000000;
+  --color-background: #FFFFFF;
+  --color-accent: #FCEB23;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+
+.nova-test {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-accent), #f4e71a);
+  color: var(--color-primary);
+  border-radius: 1rem;
+  margin: 2rem;
+}

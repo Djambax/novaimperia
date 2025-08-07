@@ -6,7 +6,13 @@ const pageTypes: types.IPageType[] = [
     pluralName: 'pages',
     defaultLocked: false,
     defaultStatus: types.PageStatus.Published,
-    getDefaultContent: () => [],
+    getDefaultContent: () => [
+      {
+        id: 'hero-nova-default',
+        type: 'hero-nova',
+        props: {}
+      }
+    ],
   },
   {
     name: 'layout',
@@ -15,7 +21,7 @@ const pageTypes: types.IPageType[] = [
     defaultStatus: types.PageStatus.Published,
     getDefaultContent: () => [],
     isEntity: true,
-    allowedBlockTypes: ['header', 'footer'],
+    allowedBlockTypes: ['navbar-nova', 'footer-nova'],
   },
 ]
 
